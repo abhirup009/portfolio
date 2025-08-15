@@ -112,9 +112,9 @@ export default function IntroSection() {
 
         {/* Project Showcases */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 py-8">
-          <Link href="/projects/ticker-real-time-push-infrastructure" className="group">
+          <Link href="/projects/realtime-event-push-platform" className="group">
             <div className="border border-border/40 rounded-xl p-6 bg-card/30 backdrop-blur-sm hover:bg-card/50 hover:border-primary/30 transition-all duration-300 cursor-pointer">
-              <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Ticker - Real-Time Push Infrastructure</h3>
+              <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Realtime Event Push Platform</h3>
               <p className="text-muted-foreground text-lg">
                 Event broadcast to 50K sockets on p99 &lt;300ms latency
               </p>

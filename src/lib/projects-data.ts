@@ -22,9 +22,9 @@ export interface Project {
 
 export const projectsData: Project[] = [
   {
-    title: "Ticker – Real-Time Backend-to-Frontend Push Infrastructure",
-    slug: "ticker-real-time-push-infrastructure",
-    shortDescription: "Designed and implemented Ticker, a low-latency, cost-efficient platform for real-time backend-to-frontend communication.",
+    title: "Realtime Event Push Platform",
+    slug: "realtime-event-push-platform",
+    shortDescription: "Designed and implemented Realtime Event Push Platform, a low-latency, cost-efficient platform for real-time backend-to-frontend communication.",
     summary: `Functional Capabilities
   • Backend-to-Frontend Event Push: Real-time event delivery to clients using persistent WebSocket connections.
   • Online/Offline Status Indicators: Live client presence monitoring.
