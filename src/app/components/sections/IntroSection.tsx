@@ -92,77 +92,68 @@ export default function IntroSection() {
 
   return (
     <Section id="intro" className="min-h-[calc(100vh-4rem)] flex items-center relative">
-      <div className="text-center w-full max-w-3xl mx-auto">
-        <div className="space-y-6">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight">
-            Hello, I&apos;m <span className="text-primary">Abhirup Acharya</span>
+      <div className="w-full max-w-6xl mx-auto relative z-10 space-y-12">
+        {/* Main Headline */}
+        <div className="space-y-3">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight">
+            Senior Backend Engineer
           </h1>
-          <div className="flex items-center justify-center gap-1 text-xl md:text-2xl text-muted-foreground">
-            <span>SDE III at</span>
-            <Image
-              src="/jupiter-logo-full.png"
-              alt="Jupiter Money Logo"
-              width={400} 
-              height={100} 
-              className="h-[100px] w-auto rounded-sm ml-1.5 inline-block object-contain" 
-              data-ai-hint="company logo"
-            />
-          </div>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight">
+            focused on <span className="text-primary">real-time systems</span> &{' '}
+            <span className="text-primary">distributed infra</span>
+          </h2>
+        </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" asChild>
-              <Link href="#projects">
-                View My Work <Briefcase className="ml-2 h-5 w-5 hover:text-accent transition-colors" />
-              </Link>
-            </Button>
-            <Button size="lg" variant="outline" asChild>
-              <Link href="#contact">Get In Touch</Link>
-            </Button>
-          </div>
+        {/* Description */}
+        <p className="text-xl md:text-2xl lg:text-3xl text-muted-foreground leading-relaxed max-w-4xl">
+          Designing and Delivering <br />
+          Resilient, Scalable Software
+        </p>
 
-          {/* Contact Icons & Links */}
-          <div className="mt-8 flex flex-col sm:flex-row items-stretch sm:items-start justify-center gap-4 sm:gap-6">
-            {contactItems.map((item) => {
-              const IconComponent = item.icon;
-              return (
-                <div
-                  key={item.label}
-                  className="flex items-center justify-between p-3 rounded-md hover:bg-secondary/70 transition-colors group w-full sm:w-auto text-center sm:text-left"
-                >
-                  <Link
-                    href={item.href}
-                    target={item.external ? "_blank" : undefined}
-                    rel={item.external ? "noopener noreferrer" : undefined}
-                    className="flex items-start gap-3 flex-grow" 
-                  >
-                    <IconComponent className="h-6 w-6 text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0 mt-0.5 hover:text-accent" />
-                    <div className="flex-grow"> 
-                      <span className="block text-sm font-medium text-muted-foreground group-hover:text-primary transition-colors">
-                        {item.label}
-                      </span>
-                      <p className="text-sm text-primary/80 group-hover:text-primary cursor-text break-all">
-                        {item.textToCopy}
-                      </p>
-                    </div>
-                  </Link>
-                  <Button
-                    variant="ghost"
-                    size="icon"
-                    className="ml-2 p-1 h-auto w-auto flex-shrink-0 transition-opacity duration-200"
-                    onClick={() => handleCopy(item.textToCopy, item.label)}
-                    aria-label={`Copy ${item.label}`}
-                  >
-                    <Copy className="h-6 w-6 text-muted-foreground group-hover:text-primary" />
-                  </Button>
-                </div>
-              );
-            })}
-          </div>
+        {/* Project Showcases */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 py-8">
+          <Link href="/projects/ticker-real-time-push-infrastructure" className="group">
+            <div className="border border-border/40 rounded-xl p-6 bg-card/30 backdrop-blur-sm hover:bg-card/50 hover:border-primary/30 transition-all duration-300 cursor-pointer">
+              <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Ticker - Real-Time Push Infrastructure</h3>
+              <p className="text-muted-foreground text-lg">
+                Event broadcast to 50K sockets on p99 &lt;300ms latency
+              </p>
+            </div>
+          </Link>
+          <Link href="/projects/dynaq-distributed-event-scheduler" className="group">
+            <div className="border border-border/40 rounded-xl p-6 bg-card/30 backdrop-blur-sm hover:bg-card/50 hover:border-primary/30 transition-all duration-300 cursor-pointer">
+              <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Distributed Task Scheduling Platform</h3>
+              <p className="text-muted-foreground text-lg">
+                Fault-tolerant task engine handling finance workflows at 300k+ events/day
+              </p>
+            </div>
+          </Link>
+          <Link href="/projects/mandates-automatic-payments-platform" className="group">
+            <div className="border border-border/40 rounded-xl p-6 bg-card/30 backdrop-blur-sm hover:bg-card/50 hover:border-primary/30 transition-all duration-300 cursor-pointer">
+              <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Mandates - Automatic Payments Platform</h3>
+              <p className="text-muted-foreground text-lg">
+                High-throughput financial mandate system handling 250k+ executions/day
+              </p>
+            </div>
+          </Link>
+        </div>
 
+        {/* Action Buttons */}
+        <div className="flex flex-col sm:flex-row gap-4">
+          <Button size="lg" asChild className="text-lg px-10 py-4 h-auto bg-primary/80 hover:bg-primary/70 text-primary-foreground font-medium">
+            <Link href="#projects">
+              Explore System Architectures
+            </Link>
+          </Button>
+          <Button size="lg" variant="outline" asChild className="text-lg px-10 py-4 h-auto">
+            <Link href="#contact">
+              Contact
+            </Link>
+          </Button>
         </div>
       </div>
       {showScrollIndicator && (
-        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 md:bottom-6">
+        <div className="absolute bottom-20 right-4 md:bottom-16 md:right-8">
           <Link href="#projects" aria-label="Scroll to projects">
             <ChevronsDown className="h-10 w-10 text-primary animate-bounce hover:text-accent transition-colors drop-shadow-[0_0_8px_hsl(var(--primary))]" />
           </Link>

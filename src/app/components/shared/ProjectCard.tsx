@@ -191,9 +191,9 @@ export default function ProjectCard({
         </div>
       </CardContent>
       <CardFooter className="flex justify-start gap-2 pt-4">
-        <Button asChild>
+        <Button asChild className="bg-primary/80 hover:bg-primary/70 text-primary-foreground font-medium">
           <Link href={`/projects/${slug}`}>
-            View Case Study <ArrowRight className="ml-2 h-4 w-4" />
+            View System Architecture <ArrowRight className="ml-2 h-4 w-4" />
           </Link>
         </Button>
         {githubUrl && (
