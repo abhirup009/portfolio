@@ -1,7 +1,7 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Code, CheckCircle2, AlertCircle, Cpu } from 'lucide-react';
 
-export default function TickerTechnology() {
+export default function RealtimeEventPushTechnology() {
   return (
     <section id="technology-decisions">
       <h2 className="text-3xl font-bold mb-6">4. Technology Decisions & Trade-offs</h2>

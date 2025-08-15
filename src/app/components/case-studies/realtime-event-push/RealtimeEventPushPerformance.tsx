@@ -1,7 +1,7 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { TrendingUp, Zap, Target, Activity } from 'lucide-react';
 
-export default function TickerPerformance() {
+export default function RealtimeEventPushPerformance() {
   return (
     <section id="performance-metrics">
       <h2 className="text-3xl font-bold mb-6">6. Performance & Scale</h2>

@@ -1,7 +1,7 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Users, Settings, Shield, Globe } from 'lucide-react';
 
-export default function TickerActors() {
+export default function RealtimeEventPushActors() {
   return (
     <section id="actors-usage">
       <h2 className="text-3xl font-bold mb-6">2. Actors & Usage Patterns</h2>

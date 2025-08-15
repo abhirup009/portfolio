@@ -1,7 +1,7 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Shield, Lock, Eye, AlertTriangle } from 'lucide-react';
 
-export default function TickerSecurity() {
+export default function RealtimeEventPushSecurity() {
   return (
     <section id="security-considerations">
       <h2 className="text-3xl font-bold mb-6">7. Security & PII Handling</h2>

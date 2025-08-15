@@ -21,8 +21,8 @@ export const navItems: NavItem[] = [
   // "Home" is handled by the dedicated icon in the header
   { label: 'Projects', href: '#projects' },
   { label: 'Experience', href: '#experience' },
-  { label: 'Skills', href: '#skills' },
   { label: 'Publications', href: '#publications' },
+  { label: 'Skills', href: '#skills' },
   { label: 'Education', href: '#education' },
   { label: 'Contact', href: '#contact' },
 ];
@@ -36,8 +36,8 @@ export default function HomePage() {
         <IntroSection />
         <ProjectsSection />
         <ExperienceSection />
-        <SkillsSection className="bg-secondary/40"/>
         <PublicationsSection />
+        <SkillsSection className="bg-secondary/40"/>
         <EducationSection />
         <ContactSection className="bg-secondary/40"/>
       </main>

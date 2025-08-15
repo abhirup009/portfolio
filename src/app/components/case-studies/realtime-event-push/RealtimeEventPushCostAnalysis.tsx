@@ -1,7 +1,7 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { TrendingDown, DollarSign, BarChart3, Calculator } from 'lucide-react';
 
-export default function TickerCostAnalysis() {
+export default function RealtimeEventPushCostAnalysis() {
   return (
     <section id="cost-analysis">
       <h2 className="text-3xl font-bold mb-6">5. Cost Analysis & Comparison</h2>

@@ -1,14 +1,14 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Activity, TrendingUp } from 'lucide-react';
 
-export default function TickerOverview() {
+export default function RealtimeEventPushOverview() {
   return (
     <section id="system-overview">
       <h2 className="text-3xl font-bold mb-6">1. System Overview</h2>
       <Card>
         <CardContent className="pt-6">
           <p className="text-lg mb-6">
-            <strong>Ticker</strong> is a high-performance, real-time backend-to-frontend push infrastructure designed to eliminate polling and deliver 
+            <strong>Realtime Event Push Platform</strong> is a high-performance, real-time backend-to-frontend push infrastructure designed to eliminate polling and deliver 
             instant notifications to users. Built with NATS and WebSockets, it processes events for 50K+ concurrent connections with sub-300ms latency.
           </p>
           

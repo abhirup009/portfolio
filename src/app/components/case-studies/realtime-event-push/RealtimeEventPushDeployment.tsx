@@ -1,7 +1,7 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Cpu, Database, Globe, Settings } from 'lucide-react';
 
-export default function TickerDeployment() {
+export default function RealtimeEventPushDeployment() {
   return (
     <section id="deployment-strategy">
       <h2 className="text-3xl font-bold mb-6">8. Deployment Strategy</h2>
