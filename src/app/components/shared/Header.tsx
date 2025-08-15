@@ -3,7 +3,6 @@
 
 import Link from 'next/link';
 import { Home } from 'lucide-react';
-import { ThemeToggle } from './ThemeToggle';
 import { Button } from '@/components/ui/button';
 
 interface NavItem {
@@ -20,10 +19,10 @@ export default function Header({ navItems }: HeaderProps) {
   const desktopNavItems = navItems.filter(item => item.label !== 'Home');
 
   return (
-    <header className="fixed top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="fixed top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-16 max-w-7xl items-center justify-between px-4">
         {/* Left side: Home Icon Branding */}
-        <Link href="#intro" className="flex items-center group" aria-label="Home">
+        <Link href="/" className="flex items-center group" aria-label="Home">
           <Home className="h-6 w-6 text-primary group-hover:text-accent transition-colors" />
         </Link>
 
@@ -38,9 +37,9 @@ export default function Header({ navItems }: HeaderProps) {
           ))}
         </nav>
 
-        {/* Right side: Controls */}
+        {/* Right side: Empty space for future controls */}
         <div className="flex items-center">
-          <ThemeToggle />
+          {/* Theme toggle removed */}
         </div>
       </div>
     </header>
