@@ -3,6 +3,7 @@
 
 import type { ReactNode } from 'react';
 import { ThemeProvider } from 'next-themes';
+import { AnalyticsProvider } from './components/analytics';
 
 interface ProvidersProps {
   children: ReactNode;
@@ -11,7 +12,9 @@ interface ProvidersProps {
 export function Providers({ children }: ProvidersProps) {
   return (
     <ThemeProvider attribute="class" defaultTheme="dark" enableSystem storageKey="portfolio-theme">
-      {children}
+      <AnalyticsProvider>
+        {children}
+      </AnalyticsProvider>
     </ThemeProvider>
   );
 }
